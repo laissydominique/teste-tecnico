@@ -1,0 +1,28 @@
+<?php
+
+public function finabocci($numero)
+{
+    $n1 = 0;
+    $n2 = 1;
+    
+    if ($numero == 0) {
+        return true;
+    }
+    
+    while ($n2 < $numero) {
+        $temp = $n1;
+        $n1 = $n2;
+        $n2 = $temp + $n2;
+    }
+    return $n2 == $numero;
+}
+
+\\EXEMPLO
+
+$numero = 6;
+
+if (finabocci($numero)) {
+    echo "O número $numero pertence à sequência de Fibonacci.";
+} else {
+    echo "O número $numero não pertence à sequência de Fibonacci.";
+}
