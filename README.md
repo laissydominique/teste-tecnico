@@ -1,2 +1,3 @@
 # teste-tecnico
-Teste técnico
+
+Exercícios de teste técnico para a empresa Target Sistemas
