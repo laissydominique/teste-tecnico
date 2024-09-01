@@ -1,0 +1,32 @@
+<?php
+
+function calcularFaturamento(array $faturamentos): array
+{
+    $menorFaturamento = min($faturamentos);
+    $maiorFaturamento = max($faturamentos);
+
+    $somaFaturamento = array_sum($faturamentos);
+    $totalDias = count($faturamentos);
+    $mediaMensal = $somaFaturamento / $totalDias;
+
+    $diasAcimaMedia = 0;
+    foreach ($faturamentos as $faturamento) {
+        if ($faturamento > $mediaMensal) {
+            $diasAcimaMedia++;
+        }
+    }
+    return [
+        'menorFaturamento' => $menorFaturamento,
+        'maiorFaturamento' => $maiorFaturamento,
+        'diasAcimaMedia'   => $diasAcimaMedia
+    ];
+}
+
+\\EXEMPLO
+
+$faturamentos = [1200, 1300, 1700, 8900, 7800];
+
+$res = calcularFaturamento($faturamentos);
+
+echo "O menor faturamento do vetor é {$res['menorFaturamento']}, o maior faturamento é {$res['maiorFaturamento']}, e a quantidade de dias acima da média são {$res['diasAcimaMedia']}.";
+
