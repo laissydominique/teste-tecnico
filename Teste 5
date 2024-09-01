@@ -1,0 +1,16 @@
+function inverterString($string):string {
+    
+    $tam = strlen($string); 
+    $stringInvertida = '';   
+
+    for ($i = $tam - 1; $i >= 0; $i--) {
+        $stringInvertida .= $string[$i];
+    }
+
+    return $stringInvertida;
+}
+
+$string = "Oi, meu nome é Laissy";
+
+echo inverterString($string) . "\n";
+
