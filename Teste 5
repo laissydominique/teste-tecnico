@@ -1,3 +1,5 @@
+<?php
+
 function inverterString($string):string {
     
     $tam = strlen($string); 
