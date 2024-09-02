@@ -1,3 +1,4 @@
+<?php
 
 $indice =  13;
 $soma = 0;
